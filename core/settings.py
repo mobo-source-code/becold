@@ -31,9 +31,9 @@ INSTALLED_APPS = [
     'rest_framework',
     #Registration and Login
     'rest_framework.authtoken',
-    'rest_auth',
+    'dj_rest_auth',
     'django.contrib.sites',
-    'rest_auth.registration',
+    'dj_rest_auth.registration',
     'allauth',
     'allauth.account',
     #apps

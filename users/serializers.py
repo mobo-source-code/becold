@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from rest_auth.registration.serializers import RegisterSerializer
-from rest_auth.serializers import LoginSerializer as RestAuthLoginSerializer
+from dj_rest_auth.registration.serializers import RegisterSerializer
+from dj_rest_auth.serializers import LoginSerializer as RestAuthLoginSerializer
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 
 from users.models import CustomUser
-from rest_auth.models import TokenModel
+from dj_rest_auth.models import TokenModel
 
 class NameRegistrationSerializer(RegisterSerializer):
 	username = None
