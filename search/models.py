@@ -3,13 +3,15 @@ from django.db import models
 
 class Motor(models.Model):
     modeles = models.CharField(max_length=125, verbose_name='Modèles', unique=True, null=True)
-    photo = models.ImageField(null=True)
+    refri = models.CharField(max_length=125, verbose_name="Réfrigération", null=True)
     puissance_cv = models.CharField(max_length=125, verbose_name='Puissance cv', null=True)
     volume_balaye = models.CharField(max_length=125, verbose_name='Volume Balayé m3/h')
+    dm_aspi = models.CharField(max_length=125, verbose_name="Diamètre d'aspiration en pouce", null=True)
+    dm_refou = models.CharField(max_length=125, verbose_name="Diamètre de refoulement en pouce", null=True)
+    q_huile = models.CharField(max_length=125, verbose_name="Quantité d'huile", null=True)
     application = models.CharField(max_length=125, verbose_name='Application')
     voltage = models.CharField(max_length=125, verbose_name='Voltage v')
-    intensite_max_1PH_50 = models.CharField(max_length=125, verbose_name='50 HZ Intensité max pour 1PH', null=True, blank=True)
-    intensite_max_3PH_50 = models.CharField(max_length=125, verbose_name='50 HZ Intensité max pour 3PH', null=True, blank=True)
+    i_max = models.CharField(max_length=125, verbose_name='Intensité max', null=True)
     puissance_frigorifique_75 = models.CharField(max_length=125, verbose_name='Puissance Frigorifique pour 7.5°', null=True, blank=True)
     puissance_frigorifique_5 = models.CharField(max_length=125, verbose_name='Puissance Frigorifique pour 5°', null=True, blank=True)
     puissance_frigorifique_0 = models.CharField(max_length=125, verbose_name='Puissance Frigorifique pour 0°', null=True, blank=True)
